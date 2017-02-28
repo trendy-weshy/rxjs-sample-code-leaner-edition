@@ -1,0 +1,18 @@
+{
+  "name": "EarthQuake",
+  "authors": [
+    "John Waweru <wambugu.john.waweru@outlook.com>"
+  ],
+  "description": "a real time earthquake analyser",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

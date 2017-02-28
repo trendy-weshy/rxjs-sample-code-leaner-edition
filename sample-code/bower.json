@@ -1,0 +1,27 @@
+{
+  "name": "rxjs",
+  "description": "tutorial on rxjs",
+  "main": "ex1.html",
+  "authors": [
+    "John Waweru <wambugu.john.waweru@outlook.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "ReactiveX",
+    "rxjs",
+    "reactive",
+    "programming"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "rxjs": "^4.1.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "spaceship_reactive",
+  "authors": [
+    "John Waweru <wambugu.john.waweru@outlook.com>"
+  ],
+  "description": "spaceship battle game",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "rxjs": "Rx#^4.1.0",
+    "rxjs-dom": "rx-dom#^7.0.3"
+  }
+}

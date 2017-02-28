@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="bower_components/rxjs/dist/rx.all.js" charset="urf-8"></script>
+    </head>
+    <body>
+        
+        <p class="display"></p>
+        <p class="display-2"></p>
+        <p class="display-3"></p>
+
+        <script charset="utf-8">
+            var allMoves = Rx.Observable.fromEvent(document, 'mousemove');
+
+            var movesOnTheRight = allMoves.filter(function(e) {
+                /**
+                 * @docs:
+                 *  if the x co-oridnates of the mouse is greater than half the width of the screen 
+                 *  return the DOM object.
+                 * */ 
+                return e.clientX > window.innerWidth / 2;
+            });
+            var movesOnTheLeft = allMoves.filter(function(e) {
+                /**
+                 * @docs:
+                 *  if the x co-oridnates of the mouse is less than half the width of the screen 
+                 *  return the DOM object.
+                 * */
+                return e.clientX < window.innerWidth / 2;
+            });
+
+            allMoves.subscribe(function(e) {
+                var display = document.querySelector(".display");
+                display.innerHTML = `x: ${ e.clientX }, y: ${ e.clientY }`;
+            });
+
+            movesOnTheRight.subscribe(function(e) {
+                var display = document.querySelector(".display-2");
+                display.innerHTML = `Mouse is on the right:, ${ e.clientX }`;
+            });
+            movesOnTheLeft.subscribe(function(e) {
+                var display = document.querySelector(".display-3");
+                display.innerHTML = `Mouse is on the left:, ${ e.clientX }`;
+            });      
+               
+        </script>
+
+    </body>
+</html>
